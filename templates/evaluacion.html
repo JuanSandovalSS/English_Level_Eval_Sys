@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">
+                        <i class="fas fa-question-circle"></i> Pregunta {{ pregunta_numero }} de {{ total_preguntas }}
+                    </h5>
+                    <span class="badge bg-light text-dark">
+                        <i class="fas fa-tag"></i> Nivel: {{ pregunta.nivel.codigo }}
+                    </span>
+                </div>
+            </div>
+            <div class="card-body">
+                <!-- Texto de la pregunta -->
+                <h5 class="card-title">{{ pregunta.texto }}</h5>
+                
+                <!-- Instrucciones -->
+                <p class="text-muted">
+                    <i class="fas fa-info-circle"></i> {{ pregunta.instrucciones or "Escribe tu respuesta en inglés. Mínimo 20 caracteres." }}
+                </p>
+                
+                <!-- Formulario de respuesta -->
+                <form method="POST" action="{{ url_for('responder_pregunta') }}">
+                    <div class="mb-3">
+                        <label for="respuesta" class="form-label">
+                            <i class="fas fa-edit"></i> Tu respuesta:
+                        </label>
+                        <textarea class="form-control" id="respuesta" name="respuesta" 
+                                  rows="6" placeholder="Escribe tu respuesta en inglés aquí..." 
+                                  required minlength="20"></textarea>
+                        <div class="form-text">
+                            <i class="fas fa-info-circle"></i> Mínimo 20 caracteres.
+                            <span id="charCount">0</span> caracteres escritos.
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between align-items-center">
+                        <!-- Barra de progreso -->
+                        <div class="w-50">
+                            <div class="progress" style="height: 8px;">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" 
+                                     style="width: {{ (pregunta_numero / total_preguntas * 100)|round }}%;">
+                                </div>
+                            </div>
+                            <small class="text-muted">
+                                Progreso: {{ pregunta_numero }} de {{ total_preguntas }}
+                            </small>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            {% if pregunta_numero == total_preguntas %}
+                                <i class="fas fa-check"></i> Finalizar Evaluación
+                            {% else %}
+                                <i class="fas fa-arrow-right"></i> Siguiente Pregunta
+                            {% endif %}
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Tarjeta de sugerencias -->
+        <div class="card mt-3">
+            <div class="card-body">
+                <h6><i class="fas fa-lightbulb text-warning"></i> Consejos:</h6>
+                <ul class="mb-0">
+                    <li>Escribe respuestas completas y bien estructuradas</li>
+                    <li>Usa vocabulario variado y evita repetir palabras</li>
+                    <li>Intenta escribir oraciones de diferentes longitudes</li>
+                    <li>Revisa tu ortografía y gramática antes de enviar</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Contador de caracteres en tiempo real
+    document.addEventListener('DOMContentLoaded', function() {
+        const textarea = document.getElementById('respuesta');
+        const charCount = document.getElementById('charCount');
+        
+        textarea.addEventListener('input', function() {
+            const count = this.value.length;
+            charCount.textContent = count;
+            
+            if (count < 20) {
+                charCount.style.color = 'red';
+                charCount.style.fontWeight = 'bold';
+            } else {
+                charCount.style.color = 'green';
+                charCount.style.fontWeight = 'normal';
+            }
+        });
+        
+        // Enfoque automático en el textarea
+        textarea.focus();
+    });
+</script>
+{% endblock %}

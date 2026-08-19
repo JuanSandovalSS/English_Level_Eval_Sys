@@ -1,0 +1,802 @@
+[
+  {
+    "id": 1,
+    "nombre": "Melissa",
+    "apellido": "Alvarado",
+    "nombre_completo": "Melissa Alvarado",
+    "email": "melissa.alvarado@gmail.com",
+    "password": "password123",
+    "nivel_autopercibido": "A1",
+    "textos": [
+      {
+        "texto": "My family is small. I have a mother and father. I have two brothers. We live together in a house.",
+        "nivel": "A1",
+        "es_correcto": true
+      },
+      {
+        "texto": "One of the most challenging situations I have faced was when I had to work with an international team. It required me to improve my English significantly.",
+        "nivel": "B2",
+        "es_correcto": false
+      },
+      {
+        "texto": "The epistemological foundations of our knowledge systems are being challenged by new paradigms that emerge from diverse cultural and disciplinary perspectives, necessitating a more inclusive approach to scholarship.",
+        "nivel": "C2",
+        "es_correcto": false
+      },
+      {
+        "texto": "I work as a lawyer in a company in Huehuetenango. My job is interesting. I use English sometimes at work.",
+        "nivel": "A2",
+        "es_correcto": false
+      },
+      {
+        "texto": "In my free time, I enjoy reading, hiking, and spending time with my family. I think it's important to have a balance between work and personal life.",
+        "nivel": "B1",
+        "es_correcto": false
+      }
+    ],
+    "edad": 42,
+    "profesion": "engineer",
+    "ciudad": "Zacapa",
+    "estudios": "Secundaria"
+  },
+  {
+    "id": 2,
+    "nombre": "Fernando",
+    "apellido": "Vásquez",
+    "nombre_completo": "Fernando Vásquez",
+    "email": "fernando.vásquez@gmail.com",
+    "password": "password123",
+    "nivel_autopercibido": "A2",
+    "textos": [
+      {
+        "texto": "My family is small. I have a mother and father. I have two brothers. We live together in a house.",
+        "nivel": "A1",
+        "es_correcto": false
+      },
+      {
+        "texto": "I like to travel. Last year I visited Petén. It was a beautiful place. I want to go again.",
+        "nivel": "A2",
+        "es_correcto": true
+      },
+      {
+        "texto": "One of the most important experiences in my life was when I traveled to Suchitepéquez. I learned a lot about the culture and met wonderful people.",
+        "nivel": "B1",
+        "es_correcto": false
+      },
+      {
+        "texto": "The relationship between economic development and environmental sustainability presents one of the most significant challenges of our time. Policymakers must find innovative solutions that balance competing interests and ensure long-term prosperity.",
+        "nivel": "C1",
+        "es_correcto": false
+      },
+      {
+        "texto": "I go to school every day. I study English and Math. My favorite subject is English.",
+        "nivel": "A1",
+        "es_correcto": false
+      }
+    ],
+    "edad": 32,
+    "profesion": "lawyer",
+    "ciudad": "Cobán",
+    "estudios": "Postgrado"
+  },
+  {
+    "id": 3,
+    "nombre": "José",
+    "apellido": "González",
+    "nombre_completo": "José González",
+    "email": "josé.gonzález@gmail.com",
+    "password": "password123",
+    "nivel_autopercibido": "B1",
+    "textos": [
+      {
+        "texto": "I go to school every day. I study English and Math. My favorite subject is English.",
+        "nivel": "A1",
+        "es_correcto": false
+      },
+      {
+        "texto": "I have been studying English for 3 years. I think I am improving. I can now have basic conversations.",
+        "nivel": "A2",
+        "es_correcto": false
+      },
+      {
+        "texto": "One of the most important experiences in my life was when I traveled to Chiquimula. I learned a lot about the culture and met wonderful people.",
+        "nivel": "B1",
+        "es_correcto": true
+      },
+      {
+        "texto": "The relationship between economic development and environmental sustainability presents one of the most significant challenges of our time. Policymakers must find innovative solutions that balance competing interests and ensure long-term prosperity.",
+        "nivel": "C1",
+        "es_correcto": false
+      },
+      {
+        "texto": "I go to school every day. I study English and Math. My favorite subject is English.",
+        "nivel": "A1",
+        "es_correcto": false
+      }
+    ],
+    "edad": 51,
+    "profesion": "programmer",
+    "ciudad": "Cobán",
+    "estudios": "Universidad"
+  },
+  {
+    "id": 4,
+    "nombre": "Mario",
+    "apellido": "Martínez",
+    "nombre_completo": "Mario Martínez",
+    "email": "mario.martínez@gmail.com",
+    "password": "password123",
+    "nivel_autopercibido": "B1",
+    "textos": [
+      {
+        "texto": "My family is small. I have a mother and father. I have two brothers. We live together in a house.",
+        "nivel": "A1",
+        "es_correcto": false
+      },
+      {
+        "texto": "I have been studying English for 15 years. I think I am improving. I can now have basic conversations.",
+        "nivel": "A2",
+        "es_correcto": false
+      },
+      {
+        "texto": "I believe that education is the key to a better future. That's why I am constantly learning new things and improving my skills.",
+        "nivel": "B1",
+        "es_correcto": true
+      },
+      {
+        "texto": "I have worked in the construction industry for 7 years. My role is consultant. I enjoy my work because I like helping people.",
+        "nivel": "B1",
+        "es_correcto": true
+      },
+      {
+        "texto": "My professional experience as a designer has taught me that effective communication is the key to success in any field. I continue to work on improving my skills and knowledge.",
+        "nivel": "C1",
+        "es_correcto": false
+      }
+    ],
+    "edad": 60,
+    "profesion": "consultant",
+    "ciudad": "Escuintla",
+    "estudios": "Universidad"
+  },
+  {
+    "id": 5,
+    "nombre": "Gabriela",
+    "apellido": "Guzmán",
+    "nombre_completo": "Gabriela Guzmán",
+    "email": "gabriela.guzmán@gmail.com",
+    "password": "password123",
+    "nivel_autopercibido": "A2",
+    "textos": [
+      {
+        "texto": "Yesterday I visited my grandmother. She lives in Jalapa. We talked about the family and our plans for the future.",
+        "nivel": "A2",
+        "es_correcto": true
+      },
+      {
+        "texto": "In my free time, I enjoy reading, hiking, and spending time with my family. I think it's important to have a balance between work and personal life.",
+        "nivel": "B1",
+        "es_correcto": false
+      },
+      {
+        "texto": "I have been working as a manager for over 6 years. Throughout my career, I have learned the importance of adaptability and continuous learning.",
+        "nivel": "B2",
+        "es_correcto": false
+      },
+      {
+        "texto": "The ethical dimensions of artificial intelligence and its applications in society demand rigorous examination, as they raise fundamental questions about agency, responsibility, and the nature of human experience.",
+        "nivel": "C2",
+        "es_correcto": false
+      },
+      {
+        "texto": "My best friend is from Guatemala City. We met at university. We like to go to the movies together.",
+        "nivel": "A2",
+        "es_correcto": true
+      }
+    ],
+    "edad": 49,
+    "profesion": "analyst",
+    "ciudad": "Santa Rosa",
+    "estudios": "Universidad"
+  },
+  {
+    "id": 6,
+    "nombre": "Eduardo",
+    "apellido": "Rivas",
+    "nombre_completo": "Eduardo Rivas",
+    "email": "eduardo.rivas@gmail.com",
+    "password": "password123",
+    "nivel_autopercibido": "A2",
+    "textos": [
+      {
+        "texto": "I like to travel. Last year I visited Quetzaltenango. It was a beautiful place. I want to go again.",
+        "nivel": "A2",
+        "es_correcto": true
+      },
+      {
+        "texto": "The relationship between economic development and environmental sustainability presents one of the most significant challenges of our time. Policymakers must find innovative solutions that balance competing interests and ensure long-term prosperity.",
+        "nivel": "C1",
+        "es_correcto": false
+      },
+      {
+        "texto": "Cultural understanding is essential in our increasingly globalized world. By embracing diversity and fostering intercultural dialogue, we can create more inclusive and innovative societies.",
+        "nivel": "C1",
+        "es_correcto": false
+      },
+      {
+        "texto": "Yesterday I visited my grandmother. She lives in San Marcos. We talked about the family and our plans for the future.",
+        "nivel": "A2",
+        "es_correcto": true
+      },
+      {
+        "texto": "My goal for this year is to improve my English to a B2 level. I am taking classes and practicing every day.",
+        "nivel": "B1",
+        "es_correcto": false
+      }
+    ],
+    "edad": 50,
+    "profesion": "lawyer",
+    "ciudad": "Chiquimula",
+    "estudios": "Secundaria"
+  },
+  {
+    "id": 7,
+    "nombre": "Roberto",
+    "apellido": "Ramírez",
+    "nombre_completo": "Roberto Ramírez",
+    "email": "roberto.ramírez@gmail.com",
+    "password": "password123",
+    "nivel_autopercibido": "A2",
+    "textos": [
+      {
+        "texto": "I work as a coordinator in a company in Quetzaltenango. My job is interesting. I use English sometimes at work.",
+        "nivel": "A2",
+        "es_correcto": true
+      },
+      {
+        "texto": "My goal for this year is to improve my English to a B2 level. I am taking classes and practicing every day.",
+        "nivel": "B1",
+        "es_correcto": false
+      },
+      {
+        "texto": "The dialectical interplay between technological innovation and social transformation warrants careful examination, as it reveals profound implications for the trajectory of human development and the sustainability of our collective institutions.",
+        "nivel": "C2",
+        "es_correcto": false
+      },
+      {
+        "texto": "The evolution of digital technologies has fundamentally reshaped the landscape of modern work. Organizations must adapt their strategies to remain competitive while ensuring that their employees have the necessary skills.",
+        "nivel": "C1",
+        "es_correcto": false
+      },
+      {
+        "texto": "In my opinion, sustainable development is crucial for the future of our planet. We need to find ways to grow economically while protecting the environment.",
+        "nivel": "B2",
+        "es_correcto": false
+      }
+    ],
+    "edad": 28,
+    "profesion": "analyst",
+    "ciudad": "Antigua",
+    "estudios": "Técnico"
+  },
+  {
+    "id": 8,
+    "nombre": "Carlos",
+    "apellido": "Mendoza",
+    "nombre_completo": "Carlos Mendoza",
+    "email": "carlos.mendoza@gmail.com",
+    "password": "password123",
+    "nivel_autopercibido": "A1",
+    "textos": [
+      {
+        "texto": "Hello my name is Carlos. I am from Guatemala. I live in Retalhuleu. I like to read books and watch TV.",
+        "nivel": "A1",
+        "es_correcto": true
+      },
+      {
+        "texto": "The relationship between economic development and environmental sustainability presents one of the most significant challenges of our time. Policymakers must find innovative solutions that balance competing interests and ensure long-term prosperity.",
+        "nivel": "C1",
+        "es_correcto": false
+      },
+      {
+        "texto": "The dialectical interplay between technological innovation and social transformation warrants careful examination, as it reveals profound implications for the trajectory of human development and the sustainability of our collective institutions.",
+        "nivel": "C2",
+        "es_correcto": false
+      },
+      {
+        "texto": "In my free time, I enjoy reading, hiking, and spending time with my family. I think it's important to have a balance between work and personal life.",
+        "nivel": "B1",
+        "es_correcto": false
+      },
+      {
+        "texto": "My professional experience as a accountant has taught me that effective communication is the key to success in any field. I continue to work on improving my skills and knowledge.",
+        "nivel": "C1",
+        "es_correcto": false
+      }
+    ],
+    "edad": 31,
+    "profesion": "doctor",
+    "ciudad": "San Marcos",
+    "estudios": "Postgrado"
+  },
+  {
+    "id": 9,
+    "nombre": "Samuel",
+    "apellido": "Núñez",
+    "nombre_completo": "Samuel Núñez",
+    "email": "samuel.núñez@gmail.com",
+    "password": "password123",
+    "nivel_autopercibido": "C1",
+    "textos": [
+      {
+        "texto": "I go to school every day. I study English and Math. My favorite subject is English.",
+        "nivel": "A1",
+        "es_correcto": false
+      },
+      {
+        "texto": "I work as a programmer in a company in Zacapa. My job is interesting. I use English sometimes at work.",
+        "nivel": "A2",
+        "es_correcto": false
+      },
+      {
+        "texto": "The relationship between economic development and environmental sustainability presents one of the most significant challenges of our time. Policymakers must find innovative solutions that balance competing interests and ensure long-term prosperity.",
+        "nivel": "C1",
+        "es_correcto": true
+      },
+      {
+        "texto": "My best friend is from Guatemala City. We met at university. We like to go to the movies together.",
+        "nivel": "A2",
+        "es_correcto": false
+      },
+      {
+        "texto": "My best friend is from Guatemala City. We met at university. We like to go to the movies together.",
+        "nivel": "A2",
+        "es_correcto": false
+      }
+    ],
+    "edad": 53,
+    "profesion": "analyst",
+    "ciudad": "Huehuetenango",
+    "estudios": "Postgrado"
+  },
+  {
+    "id": 10,
+    "nombre": "Sofía",
+    "apellido": "Cruz",
+    "nombre_completo": "Sofía Cruz",
+    "email": "sofía.cruz@gmail.com",
+    "password": "password123",
+    "nivel_autopercibido": "A2",
+    "textos": [
+      {
+        "texto": "My best friend is from Guatemala City. We met at university. We like to go to the movies together.",
+        "nivel": "A2",
+        "es_correcto": true
+      },
+      {
+        "texto": "One of the most important experiences in my life was when I traveled to Petén. I learned a lot about the culture and met wonderful people.",
+        "nivel": "B1",
+        "es_correcto": false
+      },
+      {
+        "texto": "The evolution of digital technologies has fundamentally reshaped the landscape of modern work. Organizations must adapt their strategies to remain competitive while ensuring that their employees have the necessary skills.",
+        "nivel": "C1",
+        "es_correcto": false
+      },
+      {
+        "texto": "My goal for this year is to improve my English to a B2 level. I am taking classes and practicing every day.",
+        "nivel": "B1",
+        "es_correcto": false
+      },
+      {
+        "texto": "One of the most challenging situations I have faced was when I had to work with an international team. It required me to improve my English significantly.",
+        "nivel": "B2",
+        "es_correcto": false
+      }
+    ],
+    "edad": 21,
+    "profesion": "teacher",
+    "ciudad": "Jutiapa",
+    "estudios": "Universidad"
+  },
+  {
+    "id": 11,
+    "nombre": "Sofía",
+    "apellido": "Rivera",
+    "nombre_completo": "Sofía Rivera",
+    "email": "sofía.rivera@gmail.com",
+    "password": "password123",
+    "nivel_autopercibido": "B2",
+    "textos": [
+      {
+        "texto": "Technology has transformed the way we live and work. While there are many benefits, we also need to consider the ethical implications of new technologies.",
+        "nivel": "B2",
+        "es_correcto": true
+      },
+      {
+        "texto": "In my free time, I enjoy reading, hiking, and spending time with my family. I think it's important to have a balance between work and personal life.",
+        "nivel": "B1",
+        "es_correcto": false
+      },
+      {
+        "texto": "I go to school every day. I study English and Math. My favorite subject is English.",
+        "nivel": "A1",
+        "es_correcto": false
+      },
+      {
+        "texto": "I believe that education is the key to a better future. That's why I am constantly learning new things and improving my skills.",
+        "nivel": "B1",
+        "es_correcto": false
+      },
+      {
+        "texto": "Contemporary discourse on global governance must reconcile the tension between national sovereignty and the imperative for transnational cooperation on issues that transcend traditional boundaries.",
+        "nivel": "C2",
+        "es_correcto": false
+      }
+    ],
+    "edad": 45,
+    "profesion": "architect",
+    "ciudad": "Santa Rosa",
+    "estudios": "Secundaria"
+  },
+  {
+    "id": 12,
+    "nombre": "Carolina",
+    "apellido": "Núñez",
+    "nombre_completo": "Carolina Núñez",
+    "email": "carolina.núñez@gmail.com",
+    "password": "password123",
+    "nivel_autopercibido": "A1",
+    "textos": [
+      {
+        "texto": "I like to eat pizza and hamburgers. On weekends I go to the park with my friends.",
+        "nivel": "A1",
+        "es_correcto": true
+      },
+      {
+        "texto": "One of the most challenging situations I have faced was when I had to work with an international team. It required me to improve my English significantly.",
+        "nivel": "B2",
+        "es_correcto": false
+      },
+      {
+        "texto": "Cultural understanding is essential in our increasingly globalized world. By embracing diversity and fostering intercultural dialogue, we can create more inclusive and innovative societies.",
+        "nivel": "C1",
+        "es_correcto": false
+      },
+      {
+        "texto": "My goal for this year is to improve my English to a B2 level. I am taking classes and practicing every day.",
+        "nivel": "B1",
+        "es_correcto": false
+      },
+      {
+        "texto": "Contemporary society faces numerous challenges that require collaborative solutions. From climate change to social inequality, the issues we confront demand a coordinated approach from governments, businesses, and civil society.",
+        "nivel": "C1",
+        "es_correcto": false
+      }
+    ],
+    "edad": 51,
+    "profesion": "consultant",
+    "ciudad": "Chiquimula",
+    "estudios": "Universidad"
+  },
+  {
+    "id": 13,
+    "nombre": "Juan",
+    "apellido": "García",
+    "nombre_completo": "Juan García",
+    "email": "juan.garcía@gmail.com",
+    "password": "password123",
+    "nivel_autopercibido": "B1",
+    "textos": [
+      {
+        "texto": "I have worked in the healthcare industry for 13 years. My role is designer. I enjoy my work because I like helping people.",
+        "nivel": "B1",
+        "es_correcto": true
+      },
+      {
+        "texto": "One of the most challenging situations I have faced was when I had to work with an international team. It required me to improve my English significantly.",
+        "nivel": "B2",
+        "es_correcto": false
+      },
+      {
+        "texto": "The education system in Guatemala has many challenges, but there are also opportunities for those who are committed to learning. I believe that we need to invest more in education to ensure a better future for our children.",
+        "nivel": "B2",
+        "es_correcto": false
+      },
+      {
+        "texto": "Hello my name is Juan. I am from Guatemala. I live in Quetzaltenango. I like to read books and watch TV.",
+        "nivel": "A1",
+        "es_correcto": false
+      },
+      {
+        "texto": "One of the most challenging situations I have faced was when I had to work with an international team. It required me to improve my English significantly.",
+        "nivel": "B2",
+        "es_correcto": false
+      }
+    ],
+    "edad": 54,
+    "profesion": "writer",
+    "ciudad": "Quetzaltenango",
+    "estudios": "Secundaria"
+  },
+  {
+    "id": 14,
+    "nombre": "Carlos",
+    "apellido": "Sandoval",
+    "nombre_completo": "Carlos Sandoval",
+    "email": "carlos.sandoval@gmail.com",
+    "password": "password123",
+    "nivel_autopercibido": "B1",
+    "textos": [
+      {
+        "texto": "I have worked in the marketing industry for 15 years. My role is director. I enjoy my work because I like helping people.",
+        "nivel": "B1",
+        "es_correcto": true
+      },
+      {
+        "texto": "The evolution of digital technologies has fundamentally reshaped the landscape of modern work. Organizations must adapt their strategies to remain competitive while ensuring that their employees have the necessary skills.",
+        "nivel": "C1",
+        "es_correcto": false
+      },
+      {
+        "texto": "I go to school every day. I study English and Math. My favorite subject is English.",
+        "nivel": "A1",
+        "es_correcto": false
+      },
+      {
+        "texto": "The complex challenges of the 21st century require interdisciplinary approaches that integrate insights from multiple fields and foster innovative solutions to persistent problems.",
+        "nivel": "C2",
+        "es_correcto": false
+      },
+      {
+        "texto": "The ethical dimensions of artificial intelligence and its applications in society demand rigorous examination, as they raise fundamental questions about agency, responsibility, and the nature of human experience.",
+        "nivel": "C2",
+        "es_correcto": false
+      }
+    ],
+    "edad": 29,
+    "profesion": "engineer",
+    "ciudad": "Antigua",
+    "estudios": "Universidad"
+  },
+  {
+    "id": 15,
+    "nombre": "Oscar",
+    "apellido": "Rivas",
+    "nombre_completo": "Oscar Rivas",
+    "email": "oscar.rivas@gmail.com",
+    "password": "password123",
+    "nivel_autopercibido": "B2",
+    "textos": [
+      {
+        "texto": "I go to school every day. I study English and Math. My favorite subject is English.",
+        "nivel": "A1",
+        "es_correcto": false
+      },
+      {
+        "texto": "One of the most challenging situations I have faced was when I had to work with an international team. It required me to improve my English significantly.",
+        "nivel": "B2",
+        "es_correcto": true
+      },
+      {
+        "texto": "The epistemological foundations of our knowledge systems are being challenged by new paradigms that emerge from diverse cultural and disciplinary perspectives, necessitating a more inclusive approach to scholarship.",
+        "nivel": "C2",
+        "es_correcto": false
+      },
+      {
+        "texto": "I like to travel. Last year I visited Chiquimula. It was a beautiful place. I want to go again.",
+        "nivel": "A2",
+        "es_correcto": false
+      },
+      {
+        "texto": "I have been studying English for 15 years. I think I am improving. I can now have basic conversations.",
+        "nivel": "A2",
+        "es_correcto": false
+      }
+    ],
+    "edad": 21,
+    "profesion": "architect",
+    "ciudad": "Guatemala City",
+    "estudios": "Postgrado"
+  },
+  {
+    "id": 16,
+    "nombre": "José",
+    "apellido": "Vásquez",
+    "nombre_completo": "José Vásquez",
+    "email": "josé.vásquez@gmail.com",
+    "password": "password123",
+    "nivel_autopercibido": "B1",
+    "textos": [
+      {
+        "texto": "I like to travel. Last year I visited Zacapa. It was a beautiful place. I want to go again.",
+        "nivel": "A2",
+        "es_correcto": false
+      },
+      {
+        "texto": "I believe that education is the key to a better future. That's why I am constantly learning new things and improving my skills.",
+        "nivel": "B1",
+        "es_correcto": true
+      },
+      {
+        "texto": "Contemporary society faces numerous challenges that require collaborative solutions. From climate change to social inequality, the issues we confront demand a coordinated approach from governments, businesses, and civil society.",
+        "nivel": "C1",
+        "es_correcto": false
+      },
+      {
+        "texto": "The complex challenges of the 21st century require interdisciplinary approaches that integrate insights from multiple fields and foster innovative solutions to persistent problems.",
+        "nivel": "C2",
+        "es_correcto": false
+      },
+      {
+        "texto": "Contemporary society faces numerous challenges that require collaborative solutions. From climate change to social inequality, the issues we confront demand a coordinated approach from governments, businesses, and civil society.",
+        "nivel": "C1",
+        "es_correcto": false
+      }
+    ],
+    "edad": 45,
+    "profesion": "consultant",
+    "ciudad": "Escuintla",
+    "estudios": "Universidad"
+  },
+  {
+    "id": 17,
+    "nombre": "Andrea",
+    "apellido": "González",
+    "nombre_completo": "Andrea González",
+    "email": "andrea.gonzález@gmail.com",
+    "password": "password123",
+    "nivel_autopercibido": "B2",
+    "textos": [
+      {
+        "texto": "In my opinion, sustainable development is crucial for the future of our planet. We need to find ways to grow economically while protecting the environment.",
+        "nivel": "B2",
+        "es_correcto": true
+      },
+      {
+        "texto": "I believe that education is the key to a better future. That's why I am constantly learning new things and improving my skills.",
+        "nivel": "B1",
+        "es_correcto": false
+      },
+      {
+        "texto": "Technology has transformed the way we live and work. While there are many benefits, we also need to consider the ethical implications of new technologies.",
+        "nivel": "B2",
+        "es_correcto": true
+      },
+      {
+        "texto": "One of the most important experiences in my life was when I traveled to Huehuetenango. I learned a lot about the culture and met wonderful people.",
+        "nivel": "B1",
+        "es_correcto": false
+      },
+      {
+        "texto": "My professional experience as a teacher has taught me that effective communication is the key to success in any field. I continue to work on improving my skills and knowledge.",
+        "nivel": "C1",
+        "es_correcto": false
+      }
+    ],
+    "edad": 25,
+    "profesion": "consultant",
+    "ciudad": "Quetzaltenango",
+    "estudios": "Universidad"
+  },
+  {
+    "id": 18,
+    "nombre": "Jorge",
+    "apellido": "Mejía",
+    "nombre_completo": "Jorge Mejía",
+    "email": "jorge.mejía@gmail.com",
+    "password": "password123",
+    "nivel_autopercibido": "B1",
+    "textos": [
+      {
+        "texto": "I have worked in the consulting industry for 2 years. My role is designer. I enjoy my work because I like helping people.",
+        "nivel": "B1",
+        "es_correcto": true
+      },
+      {
+        "texto": "The education system in Guatemala has many challenges, but there are also opportunities for those who are committed to learning. I believe that we need to invest more in education to ensure a better future for our children.",
+        "nivel": "B2",
+        "es_correcto": false
+      },
+      {
+        "texto": "The epistemological foundations of our knowledge systems are being challenged by new paradigms that emerge from diverse cultural and disciplinary perspectives, necessitating a more inclusive approach to scholarship.",
+        "nivel": "C2",
+        "es_correcto": false
+      },
+      {
+        "texto": "I work as a engineer in a company in Chiquimula. My job is interesting. I use English sometimes at work.",
+        "nivel": "A2",
+        "es_correcto": false
+      },
+      {
+        "texto": "One of the most challenging situations I have faced was when I had to work with an international team. It required me to improve my English significantly.",
+        "nivel": "B2",
+        "es_correcto": false
+      }
+    ],
+    "edad": 29,
+    "profesion": "programmer",
+    "ciudad": "Suchitepéquez",
+    "estudios": "Universidad"
+  },
+  {
+    "id": 19,
+    "nombre": "Marta",
+    "apellido": "Martínez",
+    "nombre_completo": "Marta Martínez",
+    "email": "marta.martínez@gmail.com",
+    "password": "password123",
+    "nivel_autopercibido": "A1",
+    "textos": [
+      {
+        "texto": "My house is near the school. I walk to school every morning. It takes 15 minutes.",
+        "nivel": "A1",
+        "es_correcto": true
+      },
+      {
+        "texto": "The education system in Guatemala has many challenges, but there are also opportunities for those who are committed to learning. I believe that we need to invest more in education to ensure a better future for our children.",
+        "nivel": "B2",
+        "es_correcto": false
+      },
+      {
+        "texto": "Contemporary discourse on global governance must reconcile the tension between national sovereignty and the imperative for transnational cooperation on issues that transcend traditional boundaries.",
+        "nivel": "C2",
+        "es_correcto": false
+      },
+      {
+        "texto": "I have been working as a doctor for over 7 years. Throughout my career, I have learned the importance of adaptability and continuous learning.",
+        "nivel": "B2",
+        "es_correcto": false
+      },
+      {
+        "texto": "Contemporary discourse on global governance must reconcile the tension between national sovereignty and the imperative for transnational cooperation on issues that transcend traditional boundaries.",
+        "nivel": "C2",
+        "es_correcto": false
+      }
+    ],
+    "edad": 40,
+    "profesion": "director",
+    "ciudad": "Quetzaltenango",
+    "estudios": "Secundaria"
+  },
+  {
+    "id": 20,
+    "nombre": "Patricia",
+    "apellido": "Jiménez",
+    "nombre_completo": "Patricia Jiménez",
+    "email": "patricia.jiménez@gmail.com",
+    "password": "password123",
+    "nivel_autopercibido": "A2",
+    "textos": [
+      {
+        "texto": "My family is small. I have a mother and father. I have two brothers. We live together in a house.",
+        "nivel": "A1",
+        "es_correcto": false
+      },
+      {
+        "texto": "I have been studying English for 4 years. I think I am improving. I can now have basic conversations.",
+        "nivel": "A2",
+        "es_correcto": true
+      },
+      {
+        "texto": "The complex challenges of the 21st century require interdisciplinary approaches that integrate insights from multiple fields and foster innovative solutions to persistent problems.",
+        "nivel": "C2",
+        "es_correcto": false
+      },
+      {
+        "texto": "Hello my name is Patricia. I am from Guatemala. I live in Jalapa. I like to read books and watch TV.",
+        "nivel": "A1",
+        "es_correcto": false
+      },
+      {
+        "texto": "In my free time, I enjoy reading, hiking, and spending time with my family. I think it's important to have a balance between work and personal life.",
+        "nivel": "B1",
+        "es_correcto": false
+      }
+    ],
+    "edad": 32,
+    "profesion": "programmer",
+    "ciudad": "Santa Rosa",
+    "estudios": "Secundaria"
+  }
+]

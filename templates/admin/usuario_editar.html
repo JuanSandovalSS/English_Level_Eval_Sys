@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header bg-warning"><h5>Editar Usuario: {{ usuario.nombre }} {{ usuario.apellido }}</h5></div>
+            <div class="card-body">
+                <form method="POST">
+                    <div class="mb-3">
+                        <label>Rol</label>
+                        <select name="rol" class="form-select">
+                            <option value="ESTUDIANTE" {% if usuario.rol=='ESTUDIANTE' %}selected{% endif %}>Estudiante</option>
+                            <option value="ADMINISTRADOR" {% if usuario.rol=='ADMINISTRADOR' %}selected{% endif %}>Administrador</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label>Estado</label>
+                        <select name="estado" class="form-select">
+                            <option value="activo" {% if usuario.estado %}selected{% endif %}>Activo</option>
+                            <option value="inactivo" {% if not usuario.estado %}selected{% endif %}>Inactivo</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label>Nivel Autopercibido</label>
+                        <select name="nivel_autopercibido" class="form-select">
+                            <option value="">-- No definido --</option>
+                            {% for nivel in niveles %}
+                            <option value="{{ nivel.codigo }}" {% if usuario.nivel_autopercibido and usuario.nivel_autopercibido.codigo==nivel.codigo %}selected{% endif %}>
+                                {{ nivel.codigo }} - {{ nivel.nombre }}
+                            </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <a href="{{ url_for('admin_usuario_detalle', usuario_id=usuario.id) }}" class="btn btn-secondary">Cancelar</a>
+                        <button type="submit" class="btn btn-success">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

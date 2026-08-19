@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+        <h5><i class="fas fa-users"></i> Gestión de Usuarios</h5>
+        <span class="badge bg-light text-dark">Total: {{ usuarios|length }}</span>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                        <th>Rol</th>
+                        <th>Nivel Auto</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for u in usuarios %}
+                    <tr>
+                        <td>{{ u.id }}</td>
+                        <td>{{ u.nombre }} {{ u.apellido }}</td>
+                        <td>{{ u.correo }}</td>
+                        <td><span class="badge bg-primary">{{ u.rol }}</span></td>
+                        <td>{{ u.nivel_autopercibido.codigo if u.nivel_autopercibido else 'N/A' }}</td>
+                        <td>
+                            {% if u.estado %}
+                                <span class="badge bg-success">Activo</span>
+                            {% else %}
+                                <span class="badge bg-danger">Inactivo</span>
+                            {% endif %}
+                        </td>
+                        <td>
+                            <a href="{{ url_for('admin_usuario_detalle', usuario_id=u.id) }}" class="btn btn-sm btn-outline-primary"><i class="fas fa-eye"></i></a>
+                            <a href="{{ url_for('admin_usuario_editar', usuario_id=u.id) }}" class="btn btn-sm btn-outline-warning"><i class="fas fa-edit"></i></a>
+                            {% if u.id != current_user.id %}
+                            <form method="POST" action="{{ url_for('admin_usuario_eliminar', usuario_id=u.id) }}" style="display:inline;" onsubmit="return confirm('¿Eliminar este usuario?')">
+                                <button type="submit" class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+                            </form>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

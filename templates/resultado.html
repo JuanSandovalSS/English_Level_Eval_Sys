@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-10">
+        <!-- Tarjeta de resultado general -->
+        <div class="card text-center">
+            <div class="card-header bg-success text-white">
+                <h4><i class="fas fa-trophy"></i> Evaluación Completada</h4>
+            </div>
+            <div class="card-body p-4">
+                <div class="display-1 mb-4">
+                    <span class="badge {% if nivel in ['A1','A2'] %}bg-info{% elif nivel in ['B1','B2'] %}bg-primary{% else %}bg-success{% endif %}" 
+                          style="font-size: 4rem; padding: 30px 50px; border-radius: 20px;">
+                        {{ nivel }}
+                    </span>
+                </div>
+                
+                <h3>¡Excelente trabajo!</h3>
+                <h5 class="text-muted">{{ info_nivel.nombre }}</h5>
+                
+                <div class="card bg-light mt-4">
+                    <div class="card-body">
+                        <p class="mb-0">{{ info_nivel.descripcion }}</p>
+                    </div>
+                </div>
+
+                <!-- Comparación con nivel autopercibido -->
+                {% if mensaje_coincidencia %}
+                <div class="card mt-3 {% if coincide %}border-success{% else %}border-warning{% endif %}">
+                    <div class="card-body">
+                        <h6><i class="fas fa-flag"></i> Comparación con tu nivel autopercibido</h6>
+                        <p class="mb-0">{{ mensaje_coincidencia }}</p>
+                    </div>
+                </div>
+                {% endif %}
+                
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6><i class="fas fa-calendar"></i> Fecha</h6>
+                                <p>{{ evaluacion.fecha_inicio.strftime('%d/%m/%Y %H:%M') }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6><i class="fas fa-flag"></i> Nivel</h6>
+                                <p>{{ nivel }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <a href="{{ url_for('dashboard') }}" class="btn btn-primary">
+                        <i class="fas fa-tachometer-alt"></i> Ir al Dashboard
+                    </a>
+                    <a href="{{ url_for('iniciar_evaluacion') }}" class="btn btn-success">
+                        <i class="fas fa-redo"></i> Nueva Evaluación
+                    </a>
+                    <a href="{{ url_for('descargar_diploma', evaluacion_id=evaluacion.id) }}" class="btn btn-warning">
+                        <i class="fas fa-file-pdf"></i> Descargar Diploma
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feedback detallado por pregunta -->
+        <div class="card mt-4">
+            <div class="card-header bg-primary text-white">
+                <h5><i class="fas fa-edit"></i> Análisis de tus respuestas:</h5>
+            </div>
+            <div class="card-body">
+                {% if feedback_detallado %}
+                    {% for f in feedback_detallado %}
+                    <div class="card mt-3 border-{% if f.cumple %}success{% else %}warning{% endif %}">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <strong>Pregunta {{ f.pregunta_numero }}</strong>
+                                <span>
+                                    Esperado: {{ f.nivel_esperado }} | 
+                                    Estimado: {{ f.nivel_estimado }}
+                                    {% if f.cumple %}
+                                        <span class="badge bg-success">✅</span>
+                                    {% else %}
+                                        <span class="badge bg-warning">📚</span>
+                                    {% endif %}
+                                </span>
+                            </div>
+
+                            <!-- 🔥 NUEVO: Mostrar la respuesta del usuario -->
+                            {% if f.texto_usuario %}
+                            <div class="bg-light p-3 rounded mt-2">
+                                <strong>Tu respuesta:</strong>
+                                <p class="mb-0">{{ f.texto_usuario }}</p>
+                            </div>
+                            {% endif %}
+
+                            <div class="row mt-2">
+                                <div class="col-md-6">
+                                    <small>Palabras: {{ f.metricas.num_palabras }}</small><br>
+                                    <small>Riqueza léxica: {{ f.metricas.riqueza_lexica }}</small>
+                                </div>
+                                <div class="col-md-6">
+                                    <small>Oraciones: {{ f.metricas.num_oraciones }}</small><br>
+                                    <small>Longitud promedio: {{ f.metricas.longitud_promedio }}</small>
+                                </div>
+                            </div>
+
+                            <!-- Feedback -->
+                            <ul class="mt-2 mb-0">
+                                {% for fb in f.feedback %}
+                                    <li><small>{{ fb }}</small></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% else %}
+                    <p class="text-muted">No hay análisis detallado disponible.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

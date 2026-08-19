@@ -1,0 +1,290 @@
+[
+  {
+    "texto": "Describe your family. Who are they and what do they like to do?",
+    "instrucciones": "Write a detailed response with examples.",
+    "nivel": "A1",
+    "categoria": "Vocabulario",
+    "dificultad": 4,
+    "activa": true
+  },
+  {
+    "texto": "What do you do in your free time? Write about your hobbies.",
+    "instrucciones": "Write a clear and organized response.",
+    "nivel": "A1",
+    "categoria": "Vocabulario",
+    "dificultad": 2,
+    "activa": true
+  },
+  {
+    "texto": "Describe your house or apartment. Where is it and what does it have?",
+    "instrucciones": "Write a response of at least 50 words.",
+    "nivel": "A1",
+    "categoria": "Lectura",
+    "dificultad": 4,
+    "activa": true
+  },
+  {
+    "texto": "Write about your daily routine. What do you do every day?",
+    "instrucciones": "Write a clear and organized response.",
+    "nivel": "A1",
+    "categoria": "Lectura",
+    "dificultad": 5,
+    "activa": true
+  },
+  {
+    "texto": "Describe your favorite food. Why do you like it?",
+    "instrucciones": "Write a detailed response with examples.",
+    "nivel": "A1",
+    "categoria": "Escritura",
+    "dificultad": 2,
+    "activa": true
+  },
+  {
+    "texto": "Write about a friend. What are they like?",
+    "instrucciones": "Write a response demonstrating your level of English.",
+    "nivel": "A1",
+    "categoria": "Vocabulario",
+    "dificultad": 3,
+    "activa": true
+  },
+  {
+    "texto": "Write about a recent trip or vacation you took. Where did you go?",
+    "instrucciones": "Write a response of at least 50 words.",
+    "nivel": "A2",
+    "categoria": "Escritura",
+    "dificultad": 3,
+    "activa": true
+  },
+  {
+    "texto": "Describe your job or studies. What do you do every day?",
+    "instrucciones": "Write a clear and organized response.",
+    "nivel": "A2",
+    "categoria": "Lectura",
+    "dificultad": 5,
+    "activa": true
+  },
+  {
+    "texto": "What did you do last weekend? Write about it.",
+    "instrucciones": "Write a response demonstrating your level of English.",
+    "nivel": "A2",
+    "categoria": "Vocabulario",
+    "dificultad": 4,
+    "activa": true
+  },
+  {
+    "texto": "Describe your hometown. What is it like?",
+    "instrucciones": "Write a response of at least 50 words.",
+    "nivel": "A2",
+    "categoria": "Escritura",
+    "dificultad": 5,
+    "activa": true
+  },
+  {
+    "texto": "Write about your future plans. What are you going to do?",
+    "instrucciones": "Write a clear and organized response.",
+    "nivel": "A2",
+    "categoria": "Lectura",
+    "dificultad": 3,
+    "activa": true
+  },
+  {
+    "texto": "What's your favorite movie? Write about it.",
+    "instrucciones": "Write a response demonstrating your level of English.",
+    "nivel": "A2",
+    "categoria": "Gramática",
+    "dificultad": 4,
+    "activa": true
+  },
+  {
+    "texto": "Describe a memorable event or experience in your life.",
+    "instrucciones": "Write a well-structured response.",
+    "nivel": "B1",
+    "categoria": "Lectura",
+    "dificultad": 3,
+    "activa": true
+  },
+  {
+    "texto": "What are your career goals and how do you plan to achieve them?",
+    "instrucciones": "Write a response demonstrating your level of English.",
+    "nivel": "B1",
+    "categoria": "Lectura",
+    "dificultad": 1,
+    "activa": true
+  },
+  {
+    "texto": "Write about a problem in your community and suggest a solution.",
+    "instrucciones": "Write a response of at least 50 words.",
+    "nivel": "B1",
+    "categoria": "Lectura",
+    "dificultad": 3,
+    "activa": true
+  },
+  {
+    "texto": "Describe a person who has influenced you. What did they teach you?",
+    "instrucciones": "Write a well-structured response.",
+    "nivel": "B1",
+    "categoria": "Lectura",
+    "dificultad": 1,
+    "activa": true
+  },
+  {
+    "texto": "What are the advantages and disadvantages of social media?",
+    "instrucciones": "Write a detailed response with examples.",
+    "nivel": "B1",
+    "categoria": "Lectura",
+    "dificultad": 2,
+    "activa": true
+  },
+  {
+    "texto": "Write about your favorite place to relax and why.",
+    "instrucciones": "Write a clear and organized response.",
+    "nivel": "B1",
+    "categoria": "Escritura",
+    "dificultad": 1,
+    "activa": true
+  },
+  {
+    "texto": "Discuss the impact of technology on modern society.",
+    "instrucciones": "Write a detailed response with examples.",
+    "nivel": "B2",
+    "categoria": "Vocabulario",
+    "dificultad": 4,
+    "activa": true
+  },
+  {
+    "texto": "What are the most important challenges facing your country?",
+    "instrucciones": "Write a response demonstrating your level of English.",
+    "nivel": "B2",
+    "categoria": "Gramática",
+    "dificultad": 5,
+    "activa": true
+  },
+  {
+    "texto": "Write about the importance of education in today's world.",
+    "instrucciones": "Write a response demonstrating your level of English.",
+    "nivel": "B2",
+    "categoria": "Lectura",
+    "dificultad": 2,
+    "activa": true
+  },
+  {
+    "texto": "Describe a controversial issue and present both sides.",
+    "instrucciones": "Write a response demonstrating your level of English.",
+    "nivel": "B2",
+    "categoria": "Lectura",
+    "dificultad": 2,
+    "activa": true
+  },
+  {
+    "texto": "How has the workplace changed in recent years?",
+    "instrucciones": "Write a response demonstrating your level of English.",
+    "nivel": "B2",
+    "categoria": "Gramática",
+    "dificultad": 2,
+    "activa": true
+  },
+  {
+    "texto": "Write about the role of culture in shaping our identity.",
+    "instrucciones": "Write a clear and organized response.",
+    "nivel": "B2",
+    "categoria": "Lectura",
+    "dificultad": 4,
+    "activa": true
+  },
+  {
+    "texto": "Analyze the relationship between economic development and environmental sustainability.",
+    "instrucciones": "Write a well-structured response.",
+    "nivel": "C1",
+    "categoria": "Lectura",
+    "dificultad": 2,
+    "activa": true
+  },
+  {
+    "texto": "Discuss the future of work in an increasingly automated world.",
+    "instrucciones": "Write a clear and organized response.",
+    "nivel": "C1",
+    "categoria": "Lectura",
+    "dificultad": 1,
+    "activa": true
+  },
+  {
+    "texto": "Write about the challenges and opportunities of globalization.",
+    "instrucciones": "Write a response of at least 50 words.",
+    "nivel": "C1",
+    "categoria": "Gramática",
+    "dificultad": 5,
+    "activa": true
+  },
+  {
+    "texto": "Examine the role of media in shaping public opinion.",
+    "instrucciones": "Write a well-structured response.",
+    "nivel": "C1",
+    "categoria": "Escritura",
+    "dificultad": 4,
+    "activa": true
+  },
+  {
+    "texto": "Discuss the ethical implications of artificial intelligence.",
+    "instrucciones": "Write a response of at least 50 words.",
+    "nivel": "C1",
+    "categoria": "Vocabulario",
+    "dificultad": 5,
+    "activa": true
+  },
+  {
+    "texto": "Write about the importance of intercultural understanding.",
+    "instrucciones": "Write a well-structured response.",
+    "nivel": "C1",
+    "categoria": "Vocabulario",
+    "dificultad": 2,
+    "activa": true
+  },
+  {
+    "texto": "Explore the complexities of achieving sustainable development in a globalized world.",
+    "instrucciones": "Write a clear and organized response.",
+    "nivel": "C2",
+    "categoria": "Lectura",
+    "dificultad": 1,
+    "activa": true
+  },
+  {
+    "texto": "Analyze the tension between national sovereignty and international cooperation.",
+    "instrucciones": "Write a response of at least 50 words.",
+    "nivel": "C2",
+    "categoria": "Lectura",
+    "dificultad": 1,
+    "activa": true
+  },
+  {
+    "texto": "Discuss the epistemological challenges in contemporary social sciences.",
+    "instrucciones": "Write a detailed response with examples.",
+    "nivel": "C2",
+    "categoria": "Gramática",
+    "dificultad": 5,
+    "activa": true
+  },
+  {
+    "texto": "Examine the philosophical implications of technological advancement.",
+    "instrucciones": "Write a clear and organized response.",
+    "nivel": "C2",
+    "categoria": "Vocabulario",
+    "dificultad": 4,
+    "activa": true
+  },
+  {
+    "texto": "Write about the role of language in shaping thought and culture.",
+    "instrucciones": "Write a response demonstrating your level of English.",
+    "nivel": "C2",
+    "categoria": "Escritura",
+    "dificultad": 3,
+    "activa": true
+  },
+  {
+    "texto": "Analyze the challenges of governing in an age of information overload.",
+    "instrucciones": "Write a response demonstrating your level of English.",
+    "nivel": "C2",
+    "categoria": "Lectura",
+    "dificultad": 3,
+    "activa": true
+  }
+]

@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-10">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h5><i class="fas fa-file-alt"></i> Detalle de Evaluación #{{ evaluacion.id }}</h5>
+            </div>
+            <div class="card-body">
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <p><strong>Fecha:</strong> {{ evaluacion.fecha_inicio.strftime('%d/%m/%Y %H:%M') }}</p>
+                        <p><strong>Estado:</strong> 
+                            {% if evaluacion.estado == 'COMPLETADA' %}
+                                <span class="badge bg-success">Completada</span>
+                            {% else %}
+                                <span class="badge bg-warning">En progreso</span>
+                            {% endif %}
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <p><strong>Nivel Estimado:</strong>
+                            {% if evaluacion.nivel_estimado %}
+                                <span class="badge bg-success">{{ evaluacion.nivel_estimado.codigo }}</span>
+                            {% else %}
+                                <span class="badge bg-warning">No definido</span>
+                            {% endif %}
+                        </p>
+                        <p><strong>Nivel Autopercibido:</strong>
+                            {% if evaluacion.usuario.nivel_autopercibido %}
+                                <span class="badge bg-info">{{ evaluacion.usuario.nivel_autopercibido.codigo }}</span>
+                            {% else %}
+                                <span class="badge bg-secondary">No definido</span>
+                            {% endif %}
+                        </p>
+                    </div>
+                </div>
+
+                <h6><i class="fas fa-edit"></i> Respuestas</h6>
+                <hr>
+
+                {% for detalle in detalles %}
+                <div class="card mt-3">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <strong>Pregunta {{ detalle.numero }}</strong>
+                            <span>
+                                Esperado: <span class="badge bg-secondary">{{ detalle.nivel_esperado }}</span>
+                                Estimado: 
+                                {% if detalle.nivel_estimado != "N/A" %}
+                                    <span class="badge bg-success">{{ detalle.nivel_estimado }}</span>
+                                {% else %}
+                                    <span class="badge bg-secondary">N/A</span>
+                                {% endif %}
+                            </span>
+                        </div>
+                        <p class="mt-2"><em>{{ detalle.pregunta_texto }}</em></p>
+                        
+                        <div class="bg-light p-3 rounded">
+                            <strong>Tu respuesta:</strong>
+                            <p class="mb-0">{{ detalle.texto_usuario }}</p>
+                        </div>
+
+                        <div class="row mt-2">
+                            <div class="col-md-6">
+                                <small>Palabras: {{ detalle.metricas.num_palabras if detalle.metricas else 0 }}</small><br>
+                                <small>Riqueza léxica: {{ detalle.metricas.riqueza_lexica if detalle.metricas else 0 }}</small>
+                            </div>
+                            <div class="col-md-6">
+                                <small>Oraciones: {{ detalle.metricas.num_oraciones if detalle.metricas else 0 }}</small><br>
+                                <small>Longitud promedio: {{ detalle.metricas.longitud_promedio if detalle.metricas else 0 }}</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+                <div class="text-center mt-4">
+                    <a href="{{ url_for('historial') }}" class="btn btn-primary">
+                        <i class="fas fa-arrow-left"></i> Volver al Historial
+                    </a>
+                    {% if evaluacion.estado == 'COMPLETADA' and evaluacion.nivel_estimado %}
+                        <a href="{{ url_for('descargar_diploma', evaluacion_id=evaluacion.id) }}" 
+                           class="btn btn-warning">
+                            <i class="fas fa-file-pdf"></i> Descargar Diploma
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

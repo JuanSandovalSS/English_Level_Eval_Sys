@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="jumbotron bg-light p-5 rounded-lg">
+    <h1 class="display-4">Bienvenido al Sistema de Evaluación de Inglés</h1>
+    <p class="lead">Sistema inteligente basado en NLP para evaluar automáticamente tu nivel de inglés según el MCER.</p>
+    <hr class="my-4">
+    <p>Realiza una evaluación de 5 preguntas y recibe tu nivel estimado (A1-C2) en minutos.</p>
+    {% if current_user.is_authenticated %}
+        <a class="btn btn-primary btn-lg" href="{{ url_for('iniciar_evaluacion') }}">
+            <i class="fas fa-play"></i> Iniciar Evaluación
+        </a>
+    {% else %}
+        <a class="btn btn-primary btn-lg" href="{{ url_for('login') }}">
+            <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
+        </a>
+        <a class="btn btn-success btn-lg" href="{{ url_for('register') }}">
+            <i class="fas fa-user-plus"></i> Registrarse
+        </a>
+    {% endif %}
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">🎯 Precisión</h5>
+                <p class="card-text">Modelo BERT fine-tuned con 87% de precisión en la clasificación de niveles MCER.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">📊 Niveles MCER</h5>
+                <p class="card-text">Evaluación desde A1 (Básico) hasta C2 (Competente) según el Marco Común Europeo.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">⚡ Rápido</h5>
+                <p class="card-text">Obtén tu resultado en menos de 5 minutos con retroalimentación instantánea.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

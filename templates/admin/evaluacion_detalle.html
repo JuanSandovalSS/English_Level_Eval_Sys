@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header bg-primary text-white"><h5>Detalle de Evaluación #{{ evaluacion.id }}</h5></div>
+    <div class="card-body">
+        <p><strong>Usuario:</strong> {{ evaluacion.usuario.nombre }} {{ evaluacion.usuario.apellido }}</p>
+        <p><strong>Fecha:</strong> {{ evaluacion.fecha_inicio.strftime('%d/%m/%Y %H:%M') }}</p>
+        <p><strong>Nivel Estimado:</strong> {{ evaluacion.nivel_estimado.codigo if evaluacion.nivel_estimado else 'N/A' }}</p>
+        <hr>
+        <h6>Respuestas</h6>
+        {% for r in respuestas %}
+        <div class="card mt-2">
+            <div class="card-body">
+                <p><strong>Pregunta {{ loop.index }}:</strong> {{ r.pregunta.texto if r.pregunta else 'Pregunta eliminada' }}</p>
+                <p><strong>Respuesta:</strong> {{ r.texto }}</p>
+                <p><strong>Nivel estimado:</strong> {{ r.nivel_predicho.codigo if r.nivel_predicho else 'N/A' }}</p>
+            </div>
+        </div>
+        {% endfor %}
+        <a href="{{ url_for('admin_evaluaciones') }}" class="btn btn-primary mt-3">Volver</a>
+    </div>
+</div>
+{% endblock %}
