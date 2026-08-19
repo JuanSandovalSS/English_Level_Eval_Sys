@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header bg-dark text-white">
+        <h5><i class="fas fa-cog"></i> Panel de Administración</h5>
+    </div>
+    <div class="card-body">
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="card bg-primary text-white text-center">
+                    <div class="card-body">
+                        <h2>{{ total_usuarios }}</h2>
+                        <p><i class="fas fa-users"></i> Usuarios</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card bg-success text-white text-center">
+                    <div class="card-body">
+                        <h2>{{ total_evaluaciones }}</h2>
+                        <p><i class="fas fa-clipboard-list"></i> Evaluaciones</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card bg-warning text-white text-center">
+                    <div class="card-body">
+                        <h2>{{ total_preguntas }}</h2>
+                        <p><i class="fas fa-question-circle"></i> Preguntas</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card bg-info text-white text-center">
+                    <div class="card-body">
+                        <h2>{{ total_respuestas }}</h2>
+                        <p><i class="fas fa-reply"></i> Respuestas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h6><i class="fas fa-chart-bar"></i> Evaluaciones por Nivel</h6>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-sm">
+                            <thead>
+                                <tr><th>Nivel</th><th>Cantidad</th></tr>
+                            </thead>
+                            <tbody>
+                                {% for nivel, count in evaluaciones_por_nivel.items() %}
+                                <tr>
+                                    <td>{{ nivel }}</td>
+                                    <td>{{ count }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h6><i class="fas fa-bolt"></i> Acciones Rápidas</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-grid gap-2">
+                            <a href="{{ url_for('admin_usuarios') }}" class="btn btn-outline-primary">
+                                <i class="fas fa-users"></i> Gestionar Usuarios
+                            </a>
+                            <a href="{{ url_for('admin_preguntas') }}" class="btn btn-outline-success">
+                                <i class="fas fa-question-circle"></i> Gestionar Preguntas
+                            </a>
+                            <a href="{{ url_for('admin_evaluaciones') }}" class="btn btn-outline-info">
+                                <i class="fas fa-clipboard-list"></i> Ver Evaluaciones
+                            </a>
+                            <a href="{{ url_for('admin_niveles') }}" class="btn btn-outline-secondary">
+                                <i class="fas fa-tag"></i> Ver Niveles MCER
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

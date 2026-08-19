@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header bg-primary text-white">
+        <h5><i class="fas fa-user"></i> Detalle de Usuario: {{ usuario.nombre }} {{ usuario.apellido }}</h5>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
+                <p><strong>ID:</strong> {{ usuario.id }}</p>
+                <p><strong>Nombre:</strong> {{ usuario.nombre }} {{ usuario.apellido }}</p>
+                <p><strong>Correo:</strong> {{ usuario.correo }}</p>
+                <p><strong>Rol:</strong> <span class="badge bg-primary">{{ usuario.rol }}</span></p>
+                <p><strong>Estado:</strong> {% if usuario.estado %}Activo{% else %}Inactivo{% endif %}</p>
+                <p><strong>Nivel Autopercibido:</strong> {{ usuario.nivel_autopercibido.codigo if usuario.nivel_autopercibido else 'No definido' }}</p>
+                <p><strong>Registro:</strong> {{ usuario.fecha_creacion.strftime('%d/%m/%Y %H:%M') }}</p>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header"><h6>Evaluaciones ({{ evaluaciones|length }})</h6></div>
+                    <div class="card-body" style="max-height:300px; overflow-y:auto;">
+                        {% for eval in evaluaciones %}
+                        <div class="d-flex justify-content-between border-bottom py-1">
+                            <span>{{ eval.fecha_inicio.strftime('%d/%m/%Y') }}</span>
+                            <span>{% if eval.nivel_estimado %}{{ eval.nivel_estimado.codigo }}{% else %}En progreso{% endif %}</span>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-3">
+            <a href="{{ url_for('admin_usuarios') }}" class="btn btn-primary"><i class="fas fa-arrow-left"></i> Volver</a>
+            <a href="{{ url_for('admin_usuario_editar', usuario_id=usuario.id) }}" class="btn btn-warning"><i class="fas fa-edit"></i> Editar</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

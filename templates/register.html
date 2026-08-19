@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+        <div class="card">
+            <div class="card-header bg-success text-white text-center">
+                <h4><i class="fas fa-user-plus"></i> Crear Cuenta</h4>
+            </div>
+            <div class="card-body p-4">
+                <form method="POST">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="nombre" class="form-label">
+                                <i class="fas fa-user"></i> Nombre
+                            </label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" 
+                                   placeholder="Tu nombre" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="apellido" class="form-label">
+                                <i class="fas fa-user"></i> Apellido
+                            </label>
+                            <input type="text" class="form-control" id="apellido" name="apellido" 
+                                   placeholder="Tu apellido" required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">
+                            <i class="fas fa-envelope"></i> Correo Electrónico
+                        </label>
+                        <input type="email" class="form-control" id="email" name="email" 
+                               placeholder="ejemplo@correo.com" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">
+                            <i class="fas fa-lock"></i> Contraseña
+                        </label>
+                        <input type="password" class="form-control" id="password" name="password" 
+                               placeholder="Mínimo 6 caracteres" required minlength="6">
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirm_password" class="form-label">
+                            <i class="fas fa-check-circle"></i> Confirmar Contraseña
+                        </label>
+                        <input type="password" class="form-control" id="confirm_password" 
+                               name="confirm_password" placeholder="Repite tu contraseña" required>
+                    </div>
+
+                    <!-- NUEVO: selector de nivel autopercibido -->
+                    <div class="mb-3">
+                        <label for="nivel_autopercibido" class="form-label">
+                            <i class="fas fa-flag"></i> ¿Qué nivel de inglés crees tener?
+                        </label>
+                        <select class="form-select" id="nivel_autopercibido" name="nivel_autopercibido">
+                            <option value="">-- Selecciona tu nivel --</option>
+                            {% for nivel in niveles %}
+                                <option value="{{ nivel.codigo }}">{{ nivel.codigo }} - {{ nivel.nombre }}</option>
+                            {% endfor %}
+                        </select>
+                        <div class="form-text">
+                            Este dato nos ayudará a personalizar tu evaluación y comparar tu percepción con el resultado.
+                        </div>
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-success btn-lg">
+                            <i class="fas fa-user-plus"></i> Registrarse
+                        </button>
+                    </div>
+                </form>
+                <hr>
+                <div class="text-center">
+                    <p class="text-muted">¿Ya tienes cuenta? 
+                        <a href="{{ url_for('login') }}" class="text-success">Inicia sesión aquí</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

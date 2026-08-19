@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header bg-success text-white d-flex justify-content-between">
+        <h5><i class="fas fa-question-circle"></i> Gestión de Preguntas</h5>
+        <a href="{{ url_for('admin_pregunta_nueva') }}" class="btn btn-light btn-sm">+ Nueva</a>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr><th>ID</th><th>Texto</th><th>Nivel</th><th>Activa</th><th>Acciones</th></tr>
+                </thead>
+                <tbody>
+                    {% for p in preguntas %}
+                    <tr>
+                        <td>{{ p.id }}</td>
+                        <td>{{ p.texto[:50] }}...</td>
+                        <td><span class="badge bg-secondary">{{ p.nivel.codigo }}</span></td>
+                        <td>{% if p.activa %}✅{% else %}❌{% endif %}</td>
+                        <td>
+                            <a href="{{ url_for('admin_pregunta_editar', pregunta_id=p.id) }}" class="btn btn-sm btn-outline-warning"><i class="fas fa-edit"></i></a>
+                            <form method="POST" action="{{ url_for('admin_pregunta_eliminar', pregunta_id=p.id) }}" style="display:inline;" onsubmit="return confirm('¿Eliminar?')">
+                                <button type="submit" class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
