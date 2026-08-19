@@ -1,0 +1,44 @@
+/* Estilos adicionales */
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Badges de niveles */
+.badge-level-A1 { background: #6c757d; }
+.badge-level-A2 { background: #5b8c5a; }
+.badge-level-B1 { background: #4a9fb5; }
+.badge-level-B2 { background: #3a8fd4; }
+.badge-level-C1 { background: #6b5b8a; }
+.badge-level-C2 { background: #8b4b6a; }
